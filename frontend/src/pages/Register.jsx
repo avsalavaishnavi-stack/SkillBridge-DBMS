@@ -29,7 +29,7 @@ function Register({ onLogin }) {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/auth/register",
+                "https://skillbridge-api-2jff.onrender.com/api/auth/register",
                 {
                     name: form.name,
                     email: form.email,

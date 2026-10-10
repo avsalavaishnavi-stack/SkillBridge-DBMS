@@ -12,7 +12,7 @@ function MySkills() {
     const loadSkills = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/skills"
+                "https://skillbridge-api-2jff.onrender.com/api/skills"
             );
 
             setSkills(response.data);
@@ -35,7 +35,7 @@ function MySkills() {
             const student = JSON.parse(savedStudent);
 
             const response = await axios.get(
-                `http://localhost:5000/api/skills/student/${student.student_id}`
+                `https://skillbridge-api-2jff.onrender.com/api/skills/student/${student.student_id}`
             );
 
             setMySkills(response.data);
@@ -65,7 +65,7 @@ function MySkills() {
             const student = JSON.parse(savedStudent);
 
             await axios.post(
-                `http://localhost:5000/api/skills/student/${student.student_id}`,
+                `https://skillbridge-api-2jff.onrender.com/api/skills/student/${student.student_id}`,
                 {
                     skill_id: Number(selectedSkill),
                     proficiency
@@ -94,7 +94,7 @@ function MySkills() {
             const student = JSON.parse(savedStudent);
 
             await axios.delete(
-                `http://localhost:5000/api/skills/student/${student.student_id}/${skillId}`
+                `https://skillbridge-api-2jff.onrender.com/api/skills/student/${student.student_id}/${skillId}`
             );
 
             setMessage("Skill removed successfully.");

@@ -26,7 +26,7 @@ function PostTask() {
     const loadSkills = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:5000/api/skills"
+                "https://skillbridge-api-2jff.onrender.com/api/skills"
             );
 
             setSkills(

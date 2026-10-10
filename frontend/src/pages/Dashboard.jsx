@@ -50,7 +50,7 @@ function Dashboard() {
             const student = JSON.parse(savedStudent);
 
             const response = await axios.get(
-                `http://localhost:5000/api/dashboard/${student.student_id}`
+                `https://skillbridge-api-2jff.onrender.com/api/dashboard/${student.student_id}`
             );
 
             setStats((previous) => ({

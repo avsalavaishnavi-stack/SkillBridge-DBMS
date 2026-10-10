@@ -13,7 +13,7 @@ function Login({ onLogin, onRegister }) {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/auth/login",
+                "https://skillbridge-api-2jff.onrender.com/api/auth/login",
                 {
                     email,
                     password

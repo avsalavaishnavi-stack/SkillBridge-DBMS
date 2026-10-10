@@ -32,14 +32,14 @@ function Profile() {
 
             const skillsResponse =
                 await axios.get(
-                    `http://localhost:5000/api/skills/student/${studentData.student_id}`
+                    `https://skillbridge-api-2jff.onrender.com/api/skills/student/${studentData.student_id}`
                 );
 
             setSkills(skillsResponse.data);
 
             const dashboardResponse =
                 await axios.get(
-                    `http://localhost:5000/api/dashboard/${studentData.student_id}`
+                    `https://skillbridge-api-2jff.onrender.com/api/dashboard/${studentData.student_id}`
                 );
 
             setStats({
